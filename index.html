@@ -3,182 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umma Salma | Creative Marketing Strategist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Umma Salma | Digital Marketing Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Soft Lavender Palette from your image */
             --dark: #22223B;
             --muted: #4A4E69;
             --lavender: #9A8C98;
             --warm: #C9ADA7;
-            --bg-light: #F2E9E4;
+            --bg: #F2E9E4;
             --white: #ffffff;
-            --accent: #9A8C98;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body { 
-            background-color: var(--bg-light); 
+            background-color: var(--bg); 
             color: var(--dark); 
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png'); /* Grainy Texture */
+            background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
         }
 
-        /* --- Navigation --- */
-        nav {
+        /* --- Header/Nav --- */
+        header {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 25px 10%; position: sticky; top: 0;
-            background: rgba(242, 233, 228, 0.9);
-            backdrop-filter: blur(10px); z-index: 1000;
-            border-bottom: 1px solid rgba(74, 78, 105, 0.1);
+            padding: 20px 8%; position: fixed; width: 100%; top: 0;
+            background: rgba(242, 233, 228, 0.95); backdrop-filter: blur(10px);
+            z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -1px; text-transform: uppercase; }
+        .logo { font-family: 'Syne'; font-weight: 800; font-size: 22px; text-transform: uppercase; }
         .logo span { color: var(--lavender); }
-        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 30px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-        .btn-hire { background: var(--dark); color: var(--white) !important; padding: 12px 25px; border-radius: 50px; }
+        nav a { text-decoration: none; color: var(--dark); margin-left: 25px; font-size: 13px; font-weight: 600; text-transform: uppercase; }
+        .btn-hire-top { background: var(--dark); color: white !important; padding: 10px 20px; border-radius: 50px; }
 
-        /* --- Hero Section --- */
-        .hero { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
-        .hero span { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 24px; color: var(--lavender); margin-bottom: 10px; }
-        .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(50px, 8vw, 100px); line-height: 0.9; font-weight: 800; margin-bottom: 20px; letter-spacing: -3px; }
-        .hero p { max-width: 600px; font-size: 18px; color: var(--muted); margin-bottom: 40px; }
+        /* --- Hero --- */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
+        .hero span { font-family: 'Instrument Serif'; font-style: italic; font-size: 24px; color: var(--lavender); }
+        .hero h1 { font-family: 'Syne'; font-size: clamp(45px, 7vw, 90px); line-height: 0.9; margin: 20px 0; letter-spacing: -3px; }
+        .hero p { max-width: 650px; font-size: 18px; color: var(--muted); margin-bottom: 35px; }
         
-        .hero-stats { display: flex; gap: 60px; border-top: 1px solid rgba(74, 78, 105, 0.1); padding-top: 40px; }
-        .stat-box h2 { font-family: 'Syne'; font-size: 40px; color: var(--dark); }
-        .stat-box p { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--lavender); font-weight: 700; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 50px; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 40px; }
+        .stat-item h3 { font-family: 'Syne'; font-size: 35px; color: var(--dark); }
+        .stat-item p { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--lavender); font-weight: 700; }
 
-        /* --- Why Choose Me Section --- */
-        .about { padding: 120px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .about-img { position: relative; }
-        .about-img img { width: 100%; border-radius: 20px; filter: contrast(1.1) sepia(20%); }
-        .about-text h2 { font-family: 'Syne'; font-size: 50px; margin-bottom: 25px; }
-        .about-text h2 span { color: var(--lavender); font-style: italic; font-family: 'Instrument Serif'; }
-        
-        .skill-bar { margin-bottom: 20px; }
-        .skill-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600; font-size: 14px; text-transform: uppercase; }
-        .progress-line { height: 4px; background: rgba(74, 78, 105, 0.1); border-radius: 10px; position: relative; }
-        .progress-line span { height: 100%; background: var(--lavender); position: absolute; border-radius: 10px; }
+        /* --- Why Choose Me --- */
+        .why-me { padding: 100px 10%; display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: center; }
+        .why-img img { width: 100%; border-radius: 20px; box-shadow: 20px 20px 0px var(--lavender); }
+        .why-content h2 { font-family: 'Syne'; font-size: 45px; margin-bottom: 25px; }
+        .why-content h2 span { color: var(--lavender); }
+        .why-content p { color: var(--muted); margin-bottom: 30px; font-size: 16px; }
 
-        /* --- Projects --- */
-        .projects { padding: 100px 10%; text-align: center; background: var(--white); }
-        .projects h2 { font-family: 'Syne'; font-size: 50px; margin-bottom: 60px; }
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .project-card { background: var(--bg-light); border-radius: 20px; padding: 20px; transition: 0.3s; border: 1px solid transparent; }
-        .project-card:hover { transform: translateY(-10px); border-color: var(--lavender); }
-        .project-card img { width: 100%; border-radius: 15px; margin-bottom: 20px; height: 350px; object-fit: cover; }
-        .project-card h3 { font-family: 'Syne'; font-size: 22px; margin-bottom: 10px; }
-        .project-card p { font-size: 14px; color: var(--muted); }
+        .skill-group { margin-bottom: 20px; }
+        .skill-info { display: flex; justify-content: space-between; font-weight: 600; font-size: 13px; text-transform: uppercase; margin-bottom: 8px; }
+        .skill-bar { height: 6px; background: rgba(0,0,0,0.05); border-radius: 10px; overflow: hidden; }
+        .skill-fill { height: 100%; background: var(--lavender); border-radius: 10px; }
+
+        /* --- Work --- */
+        .work { padding: 100px 10%; text-align: center; background: var(--white); }
+        .work h2 { font-family: 'Syne'; font-size: 45px; margin-bottom: 60px; }
+        .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .work-card { background: var(--bg); padding: 20px; border-radius: 20px; transition: 0.3s; }
+        .work-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .work-card img { width: 100%; height: 350px; object-fit: cover; border-radius: 15px; margin-bottom: 20px; }
 
         /* --- Contact --- */
-        .contact { padding: 120px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; }
-        .contact h2 { font-family: 'Syne'; font-size: 60px; line-height: 1; margin-bottom: 30px; }
-        .contact-info p { font-size: 20px; margin-bottom: 40px; color: var(--muted); }
-        .social-links-list { list-style: none; }
-        .social-links-list li { margin-bottom: 15px; }
-        .social-links-list a { text-decoration: none; color: var(--dark); font-weight: 700; font-size: 18px; border-bottom: 2px solid var(--lavender); }
+        .contact { padding: 100px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+        .contact-details h2 { font-family: 'Syne'; font-size: 50px; margin-bottom: 30px; line-height: 1; }
+        .contact-item { margin-bottom: 25px; display: flex; align-items: center; gap: 15px; }
+        .contact-item b { color: var(--lavender); text-transform: uppercase; font-size: 12px; }
 
-        .form-box { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid rgba(74, 78, 105, 0.1); border-radius: 10px; outline: none; background: var(--bg-light); }
-        .btn-send { width: 100%; background: var(--dark); color: var(--white); border: none; padding: 15px; border-radius: 10px; font-weight: 700; cursor: pointer; }
+        .form-card { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+        input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; background: #fafafa; }
+        .btn-submit { width: 100%; background: var(--dark); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; }
 
-        footer { padding: 50px; text-align: center; border-top: 1px solid rgba(74, 78, 105, 0.1); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--lavender); }
+        /* --- Footer --- */
+        footer { padding: 80px 10% 40px; text-align: center; border-top: 1px solid rgba(0,0,0,0.05); }
+        .footer-profile img { width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px; border: 3px solid var(--lavender); }
+        .social-box { margin: 30px 0; }
+        .social-box a { margin: 0 15px; color: var(--dark); text-decoration: none; font-weight: 700; border-bottom: 2px solid var(--lavender); }
+        .copy { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--lavender); margin-top: 40px; }
 
-        @media (max-width: 900px) {
-            .about, .contact { grid-template-columns: 1fr; text-align: center; }
-            .hero h1 { font-size: 60px; }
+        @media (max-width: 800px) {
+            .why-me, .contact { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <nav>
+    <header>
         <div class="logo">Umma<span>Salma</span></div>
-        <div class="nav-links">
+        <nav>
             <a href="#">Home</a>
-            <a href="#projects">Work</a>
-            <a href="#contact" class="btn-hire">Let's Talk</a>
-        </div>
-    </nav>
+            <a href="#about">About</a>
+            <a href="#work">Projects</a>
+            <a href="#contact" class="btn-hire-top">Contact</a>
+        </nav>
+    </header>
 
     <section class="hero">
-        <span>Assalamu Alaikum, I am</span>
-        <h1>Umma Salma</h1>
-        <p>A Digital Marketing Strategist who blends classic aesthetics with modern data to grow brands through Pinterest, Instagram, and Strategic SEO.</p>
-        <div class="hero-stats">
-            <div class="stat-box"><h2>12+</h2><p>Brands Helped</p></div>
-            <div class="stat-box"><h2>80+</h2><p>Projects</p></div>
-            <div class="stat-box"><h2>5k+</h2><p>Reach</p></div>
+        <span>Strategic Digital Marketer</span>
+        <h1>Creating Impactful <br> Digital Experiences</h1>
+        <p>I help premium brands grow their organic reach and conversion using data-driven Pinterest SEO, Meta Ads, and aesthetic branding strategies.</p>
+        <div class="stats-grid">
+            <div class="stat-item"><h3>12+</h3><p>Global Brands</p></div>
+            <div class="stat-item"><h3>80+</h3><p>Projects Done</p></div>
+            <div class="stat-item"><h3>500k+</h3><p>Monthly Reach</p></div>
+            <div class="stat-item"><h3>100%</h3><p>Dedication</p></div>
         </div>
     </section>
 
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="profile.jpg" alt="Umma Salma" onerror="this.src='https://via.placeholder.com/600x800/22223B/9A8C98?text=Umma+Salma'">
+    <section class="why-me" id="about">
+        <div class="why-img">
+            <img src="profile.jpg" alt="Umma Salma" onerror="this.src='https://via.placeholder.com/500x600/22223B/F2E9E4?text=Salma'">
         </div>
-        <div class="about-text">
-            <h2>Why Choose <span>Me?</span></h2>
-            <p>I believe marketing is not just about ads; it's about storytelling. I help businesses build a professional and aesthetic presence across all social platforms.</p>
+        <div class="why-content">
+            <h2>Why Collaborate <span>With Me?</span></h2>
+            <p>I believe marketing is an art. My goal is to transform your business into a visual story that attracts the right audience and converts them into loyal customers.</p>
             
-            <div class="skill-bar">
-                <div class="skill-info"><span>Pinterest Marketing</span><span>95%</span></div>
-                <div class="skill-line"><div class="progress-line"><span style="width: 95%;"></span></div></div>
+            <div class="skill-group">
+                <div class="skill-info"><span>Pinterest Marketing & SEO</span><span>95%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
             </div>
-            <div class="skill-bar">
-                <div class="skill-info"><span>Meta Ads Strategy</span><span>90%</span></div>
-                <div class="skill-line"><div class="progress-line"><span style="width: 90%;"></span></div></div>
+            <div class="skill-group">
+                <div class="skill-info"><span>Meta Ad Campaigns</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
             </div>
-            <div class="skill-bar">
-                <div class="skill-info"><span>SEO & Content Branding</span><span>85%</span></div>
-                <div class="skill-line"><div class="progress-line"><span style="width: 85%;"></span></div></div>
+            <div class="skill-group">
+                <div class="skill-info"><span>Content Branding</span><span>88%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div>
             </div>
         </div>
     </section>
 
-    <section class="projects" id="projects">
-        <h2>Selected Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="work1.jpg" alt="Pinterest Strategy" onerror="this.src='https://via.placeholder.com/400x500/F2E9E4/4A4E69?text=Pinterest+Work'">
-                <h3>Pinterest Marketing</h3>
-                <p>Scaling organic traffic for fashion and lifestyle brands through visual SEO.</p>
+    <section class="work" id="work">
+        <h2>Selected Works</h2>
+        <div class="work-grid">
+            <div class="work-card">
+                <img src="work1.jpg" alt="Pinterest" onerror="this.src='https://via.placeholder.com/400x500/9A8C98/F2E9E4?text=Pinterest+SEO'">
+                <h3>Pinterest SEO</h3>
+                <p>Scaling brands with vintage-style visual content.</p>
             </div>
-            <div class="project-card">
-                <img src="work2.jpg" alt="Social Branding" onerror="this.src='https://via.placeholder.com/400x500/F2E9E4/4A4E69?text=Social+Branding'">
+            <div class="work-card">
+                <img src="work2.jpg" alt="Instagram" onerror="this.src='https://via.placeholder.com/400x500/9A8C98/F2E9E4?text=Social+Branding'">
                 <h3>Social Branding</h3>
-                <p>Creating aesthetic grid designs and engagement strategies for professionals.</p>
+                <p>Aesthetic grid designs for professional portfolios.</p>
             </div>
-            <div class="project-card">
-                <img src="work4.jpg" alt="YouTube Marketing" onerror="this.src='https://via.placeholder.com/400x500/F2E9E4/4A4E69?text=YouTube+Work'">
-                <h3>YouTube Marketing</h3>
-                <p>Channel optimization and video SEO to increase organic viewer retention.</p>
+            <div class="work-card">
+                <img src="work3.jpg" alt="Facebook" onerror="this.src='https://via.placeholder.com/400x500/9A8C98/F2E9E4?text=Meta+Ads'">
+                <h3>Conversion Ads</h3>
+                <p>High-ROI Facebook and Instagram ad funnels.</p>
             </div>
         </div>
     </section>
 
     <section class="contact" id="contact">
-        <div class="contact-info">
-            <h2>Let's Work <span>Together</span></h2>
-            <p>Ready to elevate your brand? Contact me directly through social media or email.</p>
-            <ul class="social-links-list">
-                <li><a href="https://facebook.com/umma.salma.4848/" target="_blank">Facebook</a></li>
-                <li><a href="https://instagram.com/umma.salma.4848/" target="_blank">Instagram</a></li>
-                <li><a href="https://wa.me/8801994389005" target="_blank">WhatsApp Chat</a></li>
-                <li><a href="mailto:ummasalma993@gmail.com">Email Me</a></li>
-            </ul>
+        <div class="contact-details">
+            <h2>Let's Start a <span>Conversation</span></h2>
+            <div class="contact-item"><b>Email:</b> ummasalma993@gmail.com</div>
+            <div class="contact-item"><b>WhatsApp:</b> +8801994389005</div>
+            <div class="contact-item"><b>Address:</b> Bangladesh (Serving Worldwide)</div>
         </div>
-        <div class="form-box">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Tell me about your project" rows="5"></textarea>
-            <button class="btn-send">Send Message</button>
+        <div class="form-card">
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email Address">
+            <textarea placeholder="Tell me about your brand..." rows="5"></textarea>
+            <button class="btn-submit">Send Message</button>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Umma Salma | Built with Elegance & Strategy</p>
+        <div class="footer-profile">
+            <img src="profile.jpg" alt="Salma" onerror="this.src='https://via.placeholder.com/100/22223B/9A8C98?text=S'">
+            <h3>Follow Me On</h3>
+            <div class="social-box">
+                <a href="https://facebook.com/umma.salma.4848/">Facebook</a>
+                <a href="https://instagram.com/umma.salma.4848/">Instagram</a>
+                <a href="https://wa.me/8801994389005">WhatsApp</a>
+            </div>
+        </div>
+        <p class="copy">© 2026 Umma Salma | Built with Strategy & Elegance</p>
     </footer>
 
 </body>
